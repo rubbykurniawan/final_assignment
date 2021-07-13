@@ -1,16 +1,41 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
+    <meta charset="utf-8">
     <title>Skripsi</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= favicon_link_tag 'favicon.ico' %>
     <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
-
+    <%#= csp_meta_tag %>
+    <link href="https://fonts.googleapis.com/css?family=Ubuntu" rel="stylesheet">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <%= yield %>
+    <!-- Page Container -->
+    <div class="page-container">
+      <%= render 'layouts/shared/sidebar' %>
+
+      <div class="page-content">
+        <%= render 'layouts/shared/header' %>      
+
+          <div class="page-inner">
+            <div class="page-title">
+              <h3 class="breadcrumb-header"><%= yield(:page_title) %></h3>
+            </div>
+            <div id="main-wrapper">
+              <div class="row">
+                <%= yield %>
+              </div><!-- Row -->
+            </div><!-- Main Wrapper -->
+            <div class="page-footer">
+              <p>X Insurance Brokers &copy; <%= Time.now.strftime("%Y") %></p>
+            </div>
+          </div>
+
+      </div>
+    </div><!-- /Page Container -->
   </body>
+  <%= javascript_include_tag 'application' %>
+    <%= yield(:javascript) %>
 </html>

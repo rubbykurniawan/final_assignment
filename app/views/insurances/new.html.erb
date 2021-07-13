@@ -1,0 +1,14 @@
+<% content_for :page_title do %>
+  Tambah Perusahaan Asuransi
+<% end %>
+
+<div class="col-md-12">
+  <div class="panel panel-white no-print">
+    <h5 class="panel-title">Input Stock Tagging Tanpa Excel</h5>
+    <div class="panel-body">
+      <%= form_with(model: @insurance, url: insurances_path, multipart: true, class: 'form-horizontal form-validation', local: true) do |form| %>
+        <%= render 'form', insurance: @insurance, form: form %>
+      <% end %>
+    </div>
+  </div>
+</div>
