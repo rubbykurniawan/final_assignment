@@ -9,6 +9,8 @@
 //= require plugins/jquery-slimscroll/jquery.slimscroll.min
 //= require plugins/uniform/jquery.uniform.standalone
 //= require plugins/switchery/switchery.min
+//= require plugins/datatables/js/jquery.datatables.min
+//= require plugins/bootstrap-datepicker/js/bootstrap-datepicker
 //= require plugins/d3/d3.min
 //= require plugins/nvd3/nv.d3.min
 //= require plugins/flot/jquery.flot.min
@@ -17,6 +19,6 @@
 //= require plugins/flot/jquery.flot.resize.min
 //= require plugins/flot/jquery.flot.tooltip.min
 //= require plugins/flot/jquery.flot.pie.min
-//= require plugins/chartjs/chart.min
 //= require js/space.min
-//= require js/pages/dashboard
+//= require broker-datatables
+//= require js/pages/table-data.js

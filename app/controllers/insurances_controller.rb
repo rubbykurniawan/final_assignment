@@ -3,7 +3,11 @@ class InsurancesController < ApplicationController
 
   # GET /insurances or /insurances.json
   def index
-    @insurances = Insurance.all
+    respond_to do |format|
+      format.html
+      format.json { render json: InsuranceDatatable.new(params, view_context: view_context) }
+    end
+    # @insurances = Insurance.all
   end
 
   # GET /insurances/1 or /insurances/1.json

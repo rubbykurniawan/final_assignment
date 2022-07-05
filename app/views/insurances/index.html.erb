@@ -8,32 +8,22 @@
   <div class="panel panel-white">
     <div class="panel-heading clearfix">
         <%= link_to new_insurance_path, class: 'btn btn-success m-b-sm' do %>
-          <i class="fa fa-plus"></i> <%= t('cms.commons.buttons.add_button') %>
+          <i class="fa fa-plus"></i> Add Insurance
         <% end %>
     </div>
     <div class="panel-body">
       <div class="table-responsive">
-        <table id="example" class="display table" style="width: 100%; cellspacing: 0;">
+        <table id="insurance-management-datatable" class="display table action-table" style="width: 100%; cellspacing: 0;" data-source="<%= insurances_path(format: :json) %>">
           <thead>
             <tr>
               <th>Name</th>
               <th>Address</th>
               <th>Code</th>
-              <th colspan="3"></th>
+              <th></th>
             </tr>
           </thead>
 
           <tbody>
-            <% @insurances.each do |insurance| %>
-              <tr>
-                <td><%= insurance.name %></td>
-                <td><%= insurance.address %></td>
-                <td><%= insurance.code %></td>
-                <td><%= link_to 'Show', insurance %></td>
-                <td><%= link_to 'Edit', edit_insurance_path(insurance) %></td>
-                <td><%= link_to 'Destroy', insurance, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-              </tr>
-            <% end %>
           </tbody>
         </table>
         </div>

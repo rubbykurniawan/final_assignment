@@ -12,12 +12,15 @@
  *
  *= require_tree .
  *= require_self
-  *= require plugins/bootstrap/bootstrap.min
+ *= require css/space.min
+ *= require plugins/bootstrap/bootstrap.min
   *= require plugins/font-awesome/font-awesome.min
   *= require plugins/icomoon/style
   *= require plugins/uniform/default
   *= require plugins/switchery/switchery.min
+  *= require plugins/datatables/css/jquery.datatables.min
+  *= require plugins/datatables/css/jquery.datatables_themeroller
+  *= require plugins/bootstrap-datepicker/css/datepicker3
   *= require plugins/nvd3/nv.d3.min
-  *= require css/space.min
   *= require css/custom
- */
+  */

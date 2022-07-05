@@ -54,3 +54,12 @@ end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
+
+# A wrapper around DataTable's ajax methods that allow synchronization with server-side pagination in a Rails app
+gem 'ajax-datatables-rails'
+
+# Your Rails variables in your JS
+gem 'gon', '~> 6.2.1'
+
+# Decorators/View-Models for Rails Applications
+gem 'draper'
